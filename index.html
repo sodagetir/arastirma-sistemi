@@ -208,8 +208,8 @@ async function callGemini(prompt) {
   const key = getKey();
   if (!key) { alert('Lütfen önce API anahtarınızı girin.'); return null; }
   
-  // Gemini 1.5 Flash kullanımı (Hızlı ve uygun maliyetli)
-const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${key}`;
+  // Gemini 1.5 Pro modelini kullanıyoruz
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=${key}`;
   
   try {
     const res = await fetch(url, {
